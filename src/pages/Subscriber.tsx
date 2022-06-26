@@ -1,8 +1,8 @@
-import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubsrciberMutation } from "../graphql/generated";
+import MockUpUrl from '../public/assets/code-mockup.png'
 
 
 
@@ -30,7 +30,9 @@ export function Subscriber() {
    }
 
     return (
-        <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
+        <div className="min-h-screen bg-[url('../public/assets/blur-background.png')] bg-cover bg-no-repeat flex flex-col items-center"
+        
+        >
 
             <div className=" w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
 
@@ -75,7 +77,7 @@ export function Subscriber() {
 
             </div>
 
-            <img src="../src/assets/code-mockup.png" className="mt-10" alt="" />
+            <img src={MockUpUrl} className="mt-10" alt="" />
 
         </div>
     )
